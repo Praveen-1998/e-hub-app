@@ -14,21 +14,21 @@ export class BillableEmployeesService {
 stack: any;
 
   postBillableEmployeesDetails(BillableEmployeesDetails) {
-    return this.http.post(`${this.backendUrl}/postBillableEmployeesDetails`, BillableEmployeesDetails);
+    return this.http.post(`${this.backendUrl}/billableEmployees/postBillableEmployeesDetails`, BillableEmployeesDetails);
   }
 
   getBillableEmployeesDetails() {
-    return this.http.get(`${this.backendUrl}/getBillableEmployeesDetails`);
+    return this.http.get(`${this.backendUrl}/billableEmployees/getBillableEmployeesDetails`);
   }
 
   getBillableEmployeesDetailsCount() {
-    return this.http.get(`${this.backendUrl}/getBillableEmployeesDetailsCount`);
+    return this.http.get(`${this.backendUrl}/billableEmployees/getBillableEmployeesDetailsCount`);
   }
   getBillableEmployeesExpDetails() {
-    return this.http.get(`${this.backendUrl}/getBillableEmployeesExpDetails`);
+    return this.http.get(`${this.backendUrl}/billableEmployees/getBillableEmployeesExpDetails`);
   }
 
   postBillableEmployeesPackageDetails(BillableEmployeesPackageDetails) {
-    return this.http.post(`${this.backendUrl}/postBillableEmployeesPackageDetails`, BillableEmployeesPackageDetails);
+    return this.http.post(`${this.backendUrl}/billableEmployees/postBillableEmployeesPackageDetails`, BillableEmployeesPackageDetails);
   }
 }

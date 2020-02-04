@@ -16,18 +16,19 @@ export class PackageService {
   }
 
   postBillableEmployeesPackageDetails(BillableEmployeesPackageDetails) {
-    return this.http.post(`${this.backendUrl}/postBillableEmployeesPackageDetails`, BillableEmployeesPackageDetails);
+    // tslint:disable-next-line: max-line-length
+    return this.http.post(`${this.backendUrl}/billableEmployeesPackageDetails/postBillableEmployeesPackageDetails`, BillableEmployeesPackageDetails);
   }
 
   getBillableEmployeesPackageDetails() {
-    return this.http.get(`${this.backendUrl}/getBillableEmployeesPackageDetails`);
+    return this.http.get(`${this.backendUrl}/billableEmployeesPackageDetails/getBillableEmployeesPackageDetails`);
   }
   getBillableEmployeesRevenueDetails() {
-    return this.http.get(`${this.backendUrl}/getBillableEmployeesRevenueDetails`);
+    return this.http.get(`${this.backendUrl}/billableEmployeesPackageDetails/getBillableEmployeesRevenueDetails`);
   }
 
   getTargetInfoOfTheYear() {
-  return this.http.get(`${this.backendUrl}/getTargetInfoOfTheYear`);
+  return this.http.get(`${this.backendUrl}/billableEmployeesPackageDetails/getTargetInfoOfTheYear`);
   }
 
 }

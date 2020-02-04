@@ -21,21 +21,22 @@ export class ShowimageService {
    }
 
   showImage(): Observable<any> {
-    return this.http.get(`${this.uri}/getimage`);
+    return this.http.get(`${this.uri}/showimage.route/getimage`);
   }
 
 
   getBillableEmpCountwrtClient() {
-  return this.http.get(`${this.uri}/getBillableEmpCountwrtClient`);
+  return this.http.get(`${this.uri}/billableEmployees/getBillableEmpCountwrtClient`);
   }
 
 getBillableEmpwrtClient(clientName , clientId, ClientName) {
 console.log(clientName , clientId, ClientName);
-this.http.get(`${this.uri}/getBillableEmpwrtClientName/${clientName}`).subscribe(BillableEmpListWrtClientName => {
+this.http.get(`${this.uri}/billableEmployees/getBillableEmpwrtClientName/${clientName}`).subscribe(BillableEmpListWrtClientName => {
 this.billableEmpListWrtClientName = BillableEmpListWrtClientName;
-this.http.get(`${this.uri}/getBillableEmpFresherAndExpList/${clientId}`).subscribe(BillableEmpFresherAndExpList => {
+this.http.get(`${this.uri}/billableEmployees/getBillableEmpFresherAndExpList/${clientId}`).subscribe(BillableEmpFresherAndExpList => {
 this.billableEmpFresherAndExpList = BillableEmpFresherAndExpList;
-this.http.get(`${this.uri}/getBillableEmpCountAndProfitWrtYear/${ClientName}`).subscribe(BillableEmpCountAndProfitWrtYear => {
+// tslint:disable-next-line: max-line-length
+this.http.get(`${this.uri}/billableEmployeesPackageDetails/getBillableEmpCountAndProfitWrtYear/${ClientName}`).subscribe(BillableEmpCountAndProfitWrtYear => {
 console.log('BillableEmpCountAndProfitWrtYear service        ', BillableEmpCountAndProfitWrtYear);
 this.billableEmpCountAndProfitWrtYear = BillableEmpCountAndProfitWrtYear;
 // console.log('BillableEmpCountAndProfitWrtYear service        ', this.billableEmpCountAndProfitWrtYear);
@@ -53,7 +54,8 @@ this.router.navigateByUrl('/clientsdata');
 
 
 getBillableEmpwrtClientIdIntoTable(clientId) {
-  return this.http.get(`${this.uri}/getBillableEmpwrtClientId/${clientId}`).subscribe(getBillableEmpwrtClientIdIntoTable => {
+  // tslint:disable-next-line: max-line-length
+  return this.http.get(`${this.uri}/billableEmployees/getBillableEmpwrtClientId/${clientId}`).subscribe(getBillableEmpwrtClientIdIntoTable => {
     console.log(getBillableEmpwrtClientIdIntoTable);
     this.billableEmpList = getBillableEmpwrtClientIdIntoTable;
    } , err => {
@@ -65,6 +67,6 @@ getBillableEmpwrtClientIdIntoTable(clientId) {
 
 
 getOverAllBillableEmpFresherAndExpList() {
-  return this.http.get(`${this.uri}/getOverallBillableEmpFresherAndExpList`);
+  return this.http.get(`${this.uri}/billableEmployees/getOverallBillableEmpFresherAndExpList`);
 }
 }

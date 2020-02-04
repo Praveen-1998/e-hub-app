@@ -25,18 +25,18 @@ export class ClientsDetailsService {
 
 
   getClientsDetails() {
-  return this.http.get(`${this.backendUrl}/getClientDetails`);
+  return this.http.get(`${this.backendUrl}/clientDetails/getClientDetails`);
       }
 
   updateClientDetails(clientsDetails): Observable<any> {
     const obj = {
       clientsDetails
     };
-    return this.http.post(`${this.backendUrl}/updateClientDetails`, obj);
+    return this.http.post(`${this.backendUrl}/clientDetails/updateClientDetails`, obj);
       }
 
     deleteClientdetails(id) {
-    return this.http.delete(`${this.backendUrl}/deleteClientDetails/${id}`);
+    return this.http.delete(`${this.backendUrl}/clientDetails/deleteClientDetails/${id}`);
 
     }
 }

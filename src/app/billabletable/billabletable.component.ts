@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class BillabletableComponent implements OnInit {
 
-  constructor(private showimageservice: ShowimageService) { }
+  constructor(public showimageservice: ShowimageService) { }
 
   private EmpListDetails: any = [];
 
