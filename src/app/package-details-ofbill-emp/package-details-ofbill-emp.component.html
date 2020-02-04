@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-table.css">
+    <link rel="stylesheet" type="text/css" href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-form.css">
+</head>
+
+<body>
+    <div class="container col-md-10 offset-1">
+        <div class="mt-4">
+            <h3 class="ty-heading">Package Details Of Billable Employees</h3>
+            <table class="table table-hover table-bordered">
+                <thead class="text-white ty-header">
+                    <tr>
+                        <td>Client Name</td>
+                        <td>Employee Name</td>
+                        <td>Date Of Payment by client</td>
+                        <td>Date Of Payment by TYSS </td>
+                        <td>Ratecard by client</td>
+                        <td>Ratecard by TYSS</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let billableEmployeesPackageDetails of BillableEmployeesPackageDetails">
+                        <td>{{billableEmployeesPackageDetails.clientName}}</td>
+                        <td>{{billableEmployeesPackageDetails.EmpName}}</td>
+                        <td>{{billableEmployeesPackageDetails.dateOfPaymemtByClient}}</td>
+                        <td>{{billableEmployeesPackageDetails.dateOfPaymemtByTyss}}</td>
+                        <td>{{billableEmployeesPackageDetails.rateCardByClient}}</td>
+                        <td>{{billableEmployeesPackageDetails.rateCardByTyss}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class=" mt-4 mb-4 " id="ty-pagination">
+        <jw-pagination [items]="BillableEmployeesPackageDetails " (changePage)="onChangePage($event) "></jw-pagination>
+    </div>
+</body>
+
+</html>
