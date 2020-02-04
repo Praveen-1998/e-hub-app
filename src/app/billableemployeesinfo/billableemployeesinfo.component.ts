@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./billableemployeesinfo.component.css']
 })
 export class BillableemployeesinfoComponent implements OnInit {
-  private billEmployeesDetails: any = [];
+  // private billEmployeesDetails: any = [];
   billableEmployees = {
     _id: '',
     clientName: '',
@@ -35,16 +35,16 @@ export class BillableemployeesinfoComponent implements OnInit {
   }
 
 
-  onChangePage(billEmployeesDetails: Array<any>) {
-    this.billEmployeesDetails = billEmployeesDetails;
-  }
+  // onChangePage(billEmployeesDetails: Array<any>) {
+  //   this.billEmployeesDetails = billEmployeesDetails;
+  // }
   ngOnInit() {
-    this.billableEmployeesDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
-    $(document).ready(() => {
-      $('.clickable-row').click(() => {
-        window.location = $(this).data('href');
-      });
-    });
+    // this.billableEmployeesDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
+    // $(document).ready(() => {
+    //   $('.clickable-row').click(() => {
+    //     window.location = $(this).data('href');
+    //   });
+    // });
   }
 
 

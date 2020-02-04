@@ -14,7 +14,7 @@ import { ClientsDetailsService } from '../clients-details.service';
 })
 export class ClientsInfoComponent implements OnInit {
 
-  private clientsDetails: any = [];
+  // private clientsDetails: any = [];
   ClientsDetails: any = [];
 
   clientDetails = {
@@ -44,12 +44,12 @@ export class ClientsInfoComponent implements OnInit {
     this.clientDetails = data;
   }
   ngOnInit() {
-    this.ClientsDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
-    $(document).ready(() => {
-      $('.clickable-row').click(() => {
-        window.location = $(this).data('href');
-      });
-    });
+    // this.ClientsDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
+    // $(document).ready(() => {
+    //   $('.clickable-row').click(() => {
+    //     window.location = $(this).data('href');
+    //   });
+    // });
   }
 
   getClientsDetails() {
@@ -64,9 +64,9 @@ export class ClientsInfoComponent implements OnInit {
       }
 
 
-  onChangePage(clientsDetails: Array<any>) {
-    this.clientsDetails = clientsDetails;
-  }
+  // onChangePage(clientsDetails: Array<any>) {
+  //   this.clientsDetails = clientsDetails;
+  // }
 
   updateClients(form: NgForm) {
     console.log(form.value);

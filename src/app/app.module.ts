@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { JwPaginationComponent } from 'jw-angular-pagination';
+// import { JwPaginationComponent } from 'jw-angular-pagination';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { FusionChartsModule } from 'angular-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
@@ -40,7 +40,7 @@ import { PackageDetailsOfbillEmpComponent } from './package-details-ofbill-emp/p
     ClientsDetailsComponent,
     ClientsInfoComponent,
     DisplayimageComponent,
-    JwPaginationComponent,
+    // JwPaginationComponent,
     BillableEmployeesComponent,
     ClientsLogoComponent,
     BillableComponent,

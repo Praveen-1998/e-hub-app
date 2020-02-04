@@ -13,7 +13,7 @@ import * as $ from 'jquery';
 })
 export class PackageDetailsOfbillEmpComponent implements OnInit {
 
-  private billableEmployeesPackageDetails: any = [];
+  // private billableEmployeesPackageDetails: any = [];
 
   constructor(private billableEmployeesPackageDetailsservice: PackageService, private router: Router) { 
     this.getBillableEmployeesPackageInfo();
@@ -31,15 +31,15 @@ export class PackageDetailsOfbillEmpComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.BillableEmployeesPackageDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
-    $(document).ready(() => {
-      $('.clickable-row').click(() => {
-        window.location = $(this).data('href');
-      });
-    });
+    // this.BillableEmployeesPackageDetails = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
+    // $(document).ready(() => {
+    //   $('.clickable-row').click(() => {
+    //     window.location = $(this).data('href');
+    //   });
+    // });
   }
 
-  onChangePage(BillableEmployeesPackageDetails: Array<any>) {
-    this.billableEmployeesPackageDetails = BillableEmployeesPackageDetails;
-  }
+  // onChangePage(BillableEmployeesPackageDetails: Array<any>) {
+  //   this.billableEmployeesPackageDetails = BillableEmployeesPackageDetails;
+  // }
 }

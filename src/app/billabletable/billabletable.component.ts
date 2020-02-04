@@ -11,20 +11,20 @@ export class BillabletableComponent implements OnInit {
 
   constructor(public showimageservice: ShowimageService) { }
 
-  private EmpListDetails: any = [];
+  // private EmpListDetails: any = [];
 
 
-  onChangePage(EmpListDetails: Array<any>) {
-    this.EmpListDetails = EmpListDetails;
-  }
+  // onChangePage(EmpListDetails: Array<any>) {
+  //   this.EmpListDetails = EmpListDetails;
+  // }
 
   ngOnInit() {
-    this.showimageservice.billableEmpList = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
-    $(document).ready(() => {
-      $('.clickable-row').click(() => {
-        window.location = $(this).data('href');
-      });
-    });
+    // this.showimageservice.billableEmpList = Array(168).fill(0).map((x, i) => ({ id: (i + 1), name: `${i + 1}` }));
+    // $(document).ready(() => {
+    //   $('.clickable-row').click(() => {
+    //     window.location = $(this).data('href');
+    //   });
+    // });
   }
   }
 
